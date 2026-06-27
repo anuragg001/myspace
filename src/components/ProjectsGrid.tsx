@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Code, ExternalLink, LayoutDashboard, MessageSquare } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-
 type Project = {
   name: string;
   desc: string;
@@ -31,7 +30,7 @@ const projects: Project[] = [
     stack: ["Next.js 16", "Redis", "Elysia", "Upstash"],
     status: "shipped",
     icon: <MessageSquare size={14} strokeWidth={1.8} />,
-    github: "https://github.com/anuragg001/pingspace",
+    github: undefined,
     live: "https://pingspace-ten.vercel.app/",
   },
 ];

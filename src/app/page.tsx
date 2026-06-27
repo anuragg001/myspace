@@ -1,21 +1,20 @@
 import Link from "next/link";
 import ProjectsGrid from "@/components/ProjectsGrid";
-import path from "path";
 import fs from "fs";
+import path from "path";
 
-function getLastModifiedDate():string{
+function getLastModified(): string {
   const filePath = path.join(process.cwd(), "src/app/page.tsx");
   const stat = fs.statSync(filePath);
-  
-  return stat.mtime.toLocaleString("en-GB",{
+  return stat.mtime.toLocaleDateString("en-GB", {
     day: "numeric",
     month: "long",
     year: "numeric",
-  }); // Return the last modified date as a string
+  });
 }
 
 export default function Home() {
-  const lastModified= getLastModifiedDate(); // Call the function to get the last modified date
+  const lastModified = getLastModified();
   return (
     <main className="mx-auto max-w-3xl px-4 py-16 space-y-8">
       <style>{`
@@ -121,13 +120,13 @@ export default function Home() {
           </a>
         </div>
         <div className="mt-16 flex items-center justify-between">
-          <p className="text-xs text-muted opacity-90">
+          <p className="text-xs text-muted opacity-60">
             last rearranged {lastModified}
           </p>
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
             <span className="font-mono text-[10px] text-emerald-700 tracking-wide">
-              open to work
+              open to work {lastModified}
             </span>
           </span>
         </div>
