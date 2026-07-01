@@ -2,6 +2,7 @@ import Link from "next/link";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import fs from "fs";
 import path from "path";
+import Rotating from "@/components/Rotating";
 
 function getLastModified(): string {
   const filePath = path.join(process.cwd(), "src/app/page.tsx");
@@ -28,11 +29,12 @@ export default function Home() {
         }
       `}</style>
 
-      <header className="space-y-2">
-        <h1 className="font-display text-5xl md:text-6xl tracking-tight">
-          Anurag&apos;s Space🚧
+      <div className="flex flex-col gap-4">
+        <h1 className="font-display text-6xl md:text-6xl tracking-tight ">
+           Anurag&apos;s Space🚧
         </h1>
-      </header>
+            <Rotating/>
+      </div>
 
       <section className="space-y-4 mb-12">
         <p className="font-sans text-lg leading-relaxed">
