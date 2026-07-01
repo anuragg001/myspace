@@ -3,6 +3,7 @@ import ProjectsGrid from "@/components/ProjectsGrid";
 import fs from "fs";
 import path from "path";
 import Rotating from "@/components/Rotating";
+import OrbitIcon from "@/components/OrbitIcon";
 
 function getLastModified(): string {
   const filePath = path.join(process.cwd(), "src/app/page.tsx");
@@ -29,11 +30,16 @@ export default function Home() {
         }
       `}</style>
 
-      <div className="flex flex-col gap-4">
-        <h1 className="font-display text-6xl md:text-6xl tracking-tight ">
-           Anurag&apos;s Space🚧
-        </h1>
-            <Rotating/>
+      <div className="space-y-3">
+        <div className="flex items-baseline gap-3">
+          <h1 className="font-display text-7xl tracking-tight">
+            Anurag&apos;s Space
+          </h1>
+
+          <OrbitIcon />
+        </div>
+
+        <Rotating />
       </div>
 
       <section className="space-y-4 mb-12">
@@ -42,7 +48,15 @@ export default function Home() {
           <span className="font-semibold">building, breaking, and fixing again.</span>{" "}
           CSE student into coding, lifting and understanding how systems work under the hood.
           Mostly Software, bugs, and project I care about. Occasionally thoughts on{" "}
-          <span className="font-semibold">discipline, side hustles, cooking.</span>
+          <span className="font-semibold">discipline, side hustles, cooking.</span>{" "}
+          There&apos; no substitute for{" "}
+          <a href="https://www.youtube.com/watch?v=RDyg_41QF1w"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 decoration-stone-500 hover:decoration-stone-900 transition-colors"
+            >
+              putting in the hours.
+            </a>
         </p>
       </section>
 
