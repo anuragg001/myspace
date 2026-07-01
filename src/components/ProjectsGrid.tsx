@@ -21,7 +21,7 @@ const projects: Project[] = [
     stack: ["Node.js", "Kafka", "Redis", "PostgreSQL", "Docker"],
     status: "building",
     icon: <Train size={14} strokeWidth={1.8} />,
-    github: "https://github.com/anuragg001",
+    github: "https://github.com/anuragg001/Irctc-backend",
     live: undefined,
   },
   {
