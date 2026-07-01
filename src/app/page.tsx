@@ -126,7 +126,7 @@ export default function Home() {
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
             <span className="font-mono text-[10px] text-emerald-700 tracking-wide">
-              open to work {lastModified}
+              open to work
             </span>
           </span>
         </div>

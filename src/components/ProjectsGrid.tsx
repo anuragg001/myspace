@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Code, ExternalLink, LayoutDashboard, MessageSquare } from "lucide-react";
+import { Code, ExternalLink, LayoutDashboard, MessageSquare, Train } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 type Project = {
@@ -15,6 +15,15 @@ type Project = {
 };
 
 const projects: Project[] = [
+   {
+    name: "IRCTC Backend",
+    desc: "9-service microservices clone of IRCTC — because booking a train ticket shouldn't need a prayer.",
+    stack: ["Node.js", "Kafka", "Redis", "PostgreSQL", "Docker"],
+    status: "building",
+    icon: <Train size={14} strokeWidth={1.8} />,
+    github: "https://github.com/anuragg001",
+    live: undefined,
+  },
   {
     name: "Canvas",
     desc: "AI app generator — describe a UI, get production-ready React code rendered live in the browser.",
@@ -30,9 +39,9 @@ const projects: Project[] = [
     stack: ["Next.js 16", "Redis", "Elysia", "Upstash"],
     status: "shipped",
     icon: <MessageSquare size={14} strokeWidth={1.8} />,
-    github: undefined,
+    github:"https://github.com/anuragg001/pingspace",
     live: "https://pingspace-ten.vercel.app/",
-  },
+  }
 ];
 
 export default function ProjectsGrid() {
